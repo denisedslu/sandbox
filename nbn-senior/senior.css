@@ -30,6 +30,60 @@ p.from {
 	line-height: 0;
 	margin-top: 100px;
 }
+div.article-list {
+	width: 840px;
+	margin: 0 auto;
+}
+div.article-list ul {
+	list-style-type: none;
+	padding: 0;
+}
+div.article-list ul li {
+	float: left;
+	margin: 5px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+div.article-list ul li img {
+}
+div.article-list ul li div.mask {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.6;
+}
+div.mask-text {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	font-family: 'Lato', sans-serif;
+/*	font-style: italic;
+	font-weight: 700;*/
+	font-size: 20px;
+	color: #fff;
+}
+div.mask-text p {
+	margin: 20px 15px;
+}
+div.mask-text a {
+	text-decoration: none;
+	color: #fff;
+	opacity: 1 !important;
+}
+div.mask-text a:hover {
+	color: #FF9966;
+	text-decoration: line-through;
+}
+div.mask-text p.author {
+	font-weight: 300;
+	font-style: italic;
+}
 
 /*ARTICLE PAGES*/
 div.article-container {
