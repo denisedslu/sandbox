@@ -1,3 +1,36 @@
+/*LANDING PAGE*/
+div.main-title-container {
+	color: #fff;
+}
+div.main-title-container img {
+	width: 100%;
+	position: relative;
+	margin-top: 20px;
+}
+div.main-title {
+	position: absolute;
+	top: 21px;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+p.farewell {
+	font-family: Georgia, serif;
+	font-style: italic;
+	font-size: 160px;
+	line-height: 0;
+	margin-top: 65px;
+	margin-bottom: 0;
+}
+p.from {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-style: italic;
+	font-size: 50px;
+	line-height: 0;
+	margin-top: 100px;
+}
+
 /*ARTICLE PAGES*/
 div.article-container {
 	width: 800px;
@@ -65,11 +98,3 @@ div.author-container .byline {
 div.author-container .byline p {
 	margin: 0 0 15px 0;
 }
-/*div.byline.author {
-	width: 375px;
-	margin: 0;
-	float: right;
-}
-div.byline.author p {
-	margin: 0 0 15px 0;
-}*/
