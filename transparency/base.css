@@ -1,0 +1,26 @@
+div.chart#fb {
+	width: 50%;
+}
+
+/*SCATTER STYLES*/
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: #ddd;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 13px;
+    font-family: "Helvetica", 'Arial', sans-serif;
+}
+
+.y.axis line, .y.axis path {
+    stroke: #ddd;
+}
+
+.dot {
+    fill: #bfbfbf;
+}
