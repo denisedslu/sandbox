@@ -88,6 +88,15 @@ function drawChart() {
                 	var parsed = parseInt(num);
 	                return y(parseInt(num));
                 })
+                .attr("data-site", function(d) {
+                    var site;
+                    if (d['GG User Data Requests'] !== '') {
+                        site = 'Google'
+                    } else {
+                        site = 'Facebook'
+                    }
+                    return site;
+                })
                 .attr("data-country", function(d) {
                 	return d.Country
                 })
@@ -126,13 +135,11 @@ function drawChart() {
 
                     $('p.country strong').html('in ' + country);
 
-                    d.requests_formatted = $(this).data('requests').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")    
-
+                    d.requests_formatted = $(this).data('requests').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    d.site = $(this).data('site');   
                     if ($(this).data('accts') !== undefined) {
                         d.accts_formatted = $(this).data('accts').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")    
-                    }
-                    
-                    
+                    };
 
                     var tt = ich.tooltip(d);
                     var offset = $(this).offset();

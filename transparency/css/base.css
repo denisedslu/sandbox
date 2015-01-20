@@ -73,7 +73,6 @@ p.tt-date {
 
 p.tt-country {
 	font-size: 1.5em;
-	text-transform: uppercase;
 }
 
 div.tooltip-wrap p.pct {
@@ -84,10 +83,10 @@ div.tooltip-wrap p span {
 	padding: 3px;
 }
 
-span.fb {
+span.Facebook {
 	background-color: rgba(51,153,255,0.3);
 }
 
-span.gg {
+span.Google {
 	background-color: rgba(255,153,102,0.5);
 }
