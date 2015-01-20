@@ -14,7 +14,7 @@ function drawChart() {
 		// Set the ranges
         var x = d3.scale.ordinal()
             .rangeRoundBands([0, width], 1)
-            .domain(['Dec. 2009', 'June 2010', 'Dec. 2010', 'June 2011', 'Dec. 2011', 'June 2012', 'Dec. 2012', 'June 2013', 'Dec. 2013', 'June 2014']);
+            .domain(["Dec. '09", "June '10", "Dec. '10", "June '11", "Dec. '11", "June '12", "Dec. '12", "June '13", "Dec. '13", "June '14"]);
 		var	y = d3.scale.linear().range([height, 0])
 			.domain([
 	                0,
@@ -157,9 +157,6 @@ function drawChart() {
             xAxisG
                 .attr("transform", "translate(0," + height + ")")
                 .call(xAxis);
-
-            xLabel
-            .attr("transform", "translate(" + (width / 2) + " ," + margin.bottom + ")");
             
             yAxisG
                 .call(yAxis);
