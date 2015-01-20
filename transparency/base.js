@@ -13,22 +13,24 @@ function drawChart() {
 
 		// Set the ranges
         var x = d3.scale.ordinal()
-            .domain(['June 2013', 'Dec. 2013', 'June 2014'])
             .rangeRoundBands([0, width], 1)
-		var	y = d3.scale.linear().range([height, 0]);
+            .domain(['Dec. 2009', 'June 2010', 'Dec. 2010', 'June 2011', 'Dec. 2011', 'June 2012', 'Dec. 2012', 'June 2013', 'Dec. 2013', 'June 2014']);
+		var	y = d3.scale.linear().range([height, 0])
+			.domain([
+	                0,
+	                15500
+	            ]);
 
-		var color = d3.scale.category10();
-		 
 		// Define the axes
-		var	xAxis = d3.svg.axis()
-            .scale(x)
-			.orient("bottom");
-		 
 		var	yAxis = d3.svg.axis()
 			.scale(y)
 			.orient("left");
-	
-		var	svg = d3.select(".chart#fb")
+
+		var	xAxis = d3.svg.axis()
+            .scale(x)
+			.orient("bottom");
+
+		var	svg = d3.select(".chart")
 			.append("svg")
 				.attr("width", width + margin.left + margin.right)
 				.attr("height", height + margin.top + margin.bottom)
@@ -38,13 +40,7 @@ function drawChart() {
         var xAxisG, yAxisG, dot, xLabel;
 		 
 		// Get the data
-		d3.csv("fb-data.csv", function(error, data) {
-			
-			y.domain([
-                0,
-                15500
-            ]);
-
+		d3.csv("data/gg-data.csv", function(error, data) {
 			// Add the X Axis
 			xAxisG = svg.append("g")		
 				.attr("class", "x axis")
@@ -71,22 +67,57 @@ function drawChart() {
                 .data(data)
               .enter().append("circle")
                 .attr("class", function(d) {
-                    return 'dot ' + d.Country
+                	var site;
+                	if (d['GG User Data Requests'] !== '') {
+                		site = 'gg'
+                	} else {
+                		site = 'fb'
+                	}
+                    return 'dot ' + site;
                 })
                 .attr("r", 6)
                 .attr("cx", function(d) { 
-                	return x(d.date); })
+                	return x(d['Period Ending']); })
                 .attr("cy", function(d) { 
-                	var num = d['Requests for User Data'].replace(',', '').replace('"', '');
+                	var num;
+                	if (d['GG User Data Requests'] !== '') {
+                		num = d['GG User Data Requests'].replace(',', '').replace('"', '');
+                	} else if (d['FB Requests for User Data'] !== '') {
+                		num = d['FB Requests for User Data'].replace(',', '').replace('"', '');
+                	}
                 	var parsed = parseInt(num);
-                	return y(parseInt(num));
+	                return y(parseInt(num));
                 })
-                .attr("data-requests", function(d) {return d['Requests for User Data']})
-                .attr("data-accts", function(d) {return d['User Accounts Referenced']})
-                .attr("data-pct", function(d) {return d['Percentage of requests where some data produced']});
-           
+                .attr("data-country", function(d) {
+                	return d.Country
+                })
+                .attr("data-process", function(d) {
+                	if (d['GG Legal Process'] !== '') {
+                		return d['GG Legal Process']
+                	} else {
+                		return null
+                	}
+                })
+                .attr("data-accts", function(d) {
+                	if (d['GG Users/Accounts Specified'] !== '') {
+                		return d['GG Users/Accounts Specified']
+                	} else if (d['FB User Accounts Referenced']!== '') {
+                		return d['FB User Accounts Referenced']
+                	} else {
+                		return null
+                	}
+                })
+                .attr("data-pct", function(d) {
+                	if (d['GG Percentage of requests where some data produced'] !== '') {
+                		return d['GG Percentage of requests where some data produced']
+                	} else if (d['FB Percentage of requests where some data produced'] !== '') {
+                		return d['FB Percentage of requests where some data produced']
+                	} else {
+                		return null
+                	}
+                })
+                .style("opacity", 0.7)
 		});
-
 	
 }
 
