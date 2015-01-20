@@ -38,7 +38,7 @@ function drawChart() {
     var xAxisG, yAxisG, dot;
 	 
 	// GET DATA
-	d3.csv("data/gg-data.csv", function(error, data) {
+	d3.csv("data/data.csv", function(error, data) {
 		// ADD X-AXIS
 		xAxisG = svg.append("g")		
 			.attr("class", "x axis")
