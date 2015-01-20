@@ -5,7 +5,17 @@ body {
 div.main-content {
 	margin: 0 auto;
 	width: 100%;
-	max-width: 800px;
+	max-width: 1000px;
+	clear: both;
+	padding-bottom: 100px;
+}
+
+/*INTRO WRAP*/
+
+div.intro-wrap {
+	float: left;
+	width: 27%;
+	margin-right: 3%;
 }
 
 p.intro {
@@ -17,14 +27,20 @@ p span {
 	padding: 3px;
 }
 
-span.us {
-	background-color: #ddd;
+p.intro span {
 	cursor: pointer;
 }
 
+span.us {
+	background-color: #ddd;
+}
+
+/*CHART WRAP*/
+
 div.chart {
 	position: relative;
-	margin-bottom: 100px;
+	float: left;
+	width: 70%;
 }
 
 p.country {
@@ -34,7 +50,7 @@ p.country {
 	left: 10%;
 }
 
-/*SCATTER STYLES*/
+/*SCATTERPLOT STYLES*/
 .axis path,
 .axis line {
 	fill: none;
@@ -44,22 +60,18 @@ p.country {
 }
 
 .axis text {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .y.axis line, .y.axis path {
     stroke: #ddd;
 }
 
-.dot {
-    fill: #bfbfbf;
-}
-
-.dot.fb {
+.dot[data-site="Facebook"] {
 	fill: rgb(51,153,255);
 }
 
-.dot.gg {
+.dot[data-site="Google"] {
 	fill: rgb(255,153,102);
 }
 
@@ -104,4 +116,13 @@ span.Facebook {
 
 span.Google {
 	background-color: rgba(255,153,102,0.5);
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+	div.intro-wrap, div.chart {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
 }

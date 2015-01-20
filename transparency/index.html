@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title></title>
+	<title>Google and Facebook transparency reports</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+	<meta name="keywords" content="transparency, google, facebook, user data, government data">
+	<meta name="description" content="There are significantly more requests from the United States for user data than any other country.">
 	<meta name="author" content="Denise Lu">
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/base.css">
@@ -14,8 +14,10 @@
 <body>
 
 	<div class="main-content">
-		<h1>Google and Facebook transparency reports</h1>
-		<p class="intro"><span class="Google">Google</span> and <span class="Facebook">Facebook</span> transparency reports from around the world show that, with the exception of one year, there are significantly more requests from the <span class="us">United States</span> for user data than any other country in every year for which there is available data.</p>
+		<div class="intro-wrap">
+			<h1>Google and Facebook transparency reports</h1>
+			<p class="intro"><span class="Google">Google</span> and <span class="Facebook">Facebook</span> transparency reports from around the world show that, with the exception of one year, there are significantly more requests from the <span class="us">United States</span> for user data than any other country in every year for which there is available data.</p>
+		</div>
 
 		<div class="chart">
 			<p class="country">User data requests <strong>across the world</strong></p>
@@ -23,6 +25,7 @@
 	</div>
 	<div class="tooltip-wrap"></div>
 
+	<!-- TOOLTIP TEMPLATE -->
 	<script type="text/html" id="tooltip">
 		<p class="tt-date">{{Period Ending}}</p>
 		<p class="tt-country"><strong>{{Country}}</strong> - <strong>{{requests_formatted}}</strong> requests to <span class="{{site}}">{{site}}</span></p>
@@ -37,14 +40,15 @@
 			<p class="accts">{{accts_formatted}} accounts specified</p>
 		{{/accts_formatted}}
 	</script>
+
+	<!-- JQUERY -->
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!-- UNDERSCORE -->
 	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<!-- ICANHAZ -->
 	<script src="js/ich.js"></script>
+	<!-- D3 -->
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script type="text/javascript" src="js/base.js"></script>
-
-
-
-
 </body>
 </html>
