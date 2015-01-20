@@ -90,15 +90,15 @@ function drawChart() {
                     return d["FB Requests for User Data"]
                 }
             })
-            // .attr("data-accts", function(d) {
-            // 	if (d["GG Users/Accounts Specified"] !== ") {
-            // 		return d["GG Users/Accounts Specified"]
-            // 	} else if (d["FB User Accounts Referenced"]!== ") {
-            // 		return d["FB User Accounts Referenced"]
-            // 	} else {
-            // 		return null
-            // 	}
-            // })
+            .attr("data-accts", function(d) {
+            	if (d["GG Users/Accounts Specified"] !== "") {
+            		return d["GG Users/Accounts Specified"]
+            	} else if (d["FB User Accounts Referenced"]!== "") {
+            		return d["FB User Accounts Referenced"]
+            	} else {
+            		return null
+            	}
+            })
 
             // ADDING INTERACTION
             .on("mouseover", function(d){
