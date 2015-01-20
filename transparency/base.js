@@ -138,6 +138,32 @@ function drawChart() {
                     $('p.country strong').html('across the world')
 	            });
 		});
+
+		var chartResize = function() {
+            margin = {top: 30, right: 20, bottom: 30, left: 50},
+            W = $('.chart').width();
+            width = W - margin.left - margin.right,
+			height = 600 - margin.top - margin.bottom;
+
+            x.rangeRoundBands([0, width], 1);
+
+            svg.attr("width", width + margin.left + margin.right)
+
+            xAxisG
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis);
+
+            xLabel
+            .attr("transform", "translate(" + (width / 2) + " ," + margin.bottom + ")");
+            
+            yAxisG
+                .call(yAxis);
+
+            dot.attr("cx", function(d) { return x(d['Period Ending']); })
+        };
+
+        var lazyResize = _.debounce(chartResize, 100);
+        d3.select(window).on('resize', lazyResize);
 	
 }
 
