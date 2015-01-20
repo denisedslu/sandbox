@@ -124,9 +124,12 @@ function drawChart() {
                     var country = d.Country;
                     var select = $('.dot[data-country="' + country + '"]');
                     d3.selectAll(select).classed('active', true).style('opacity',0.8);
+                    $('p.country strong').html(d.Country)
+
 	            })
 	            .on("mouseout", function(d){ 
                     d3.selectAll('.dot').style('opacity',0.6).classed('active', false);
+                    $('p.country strong').html('')
 	            });
 		});
 	
