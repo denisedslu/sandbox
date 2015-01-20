@@ -121,15 +121,21 @@ function drawChart() {
                     d3.select(this).classed('active', true);
                     this.parentNode.appendChild(this);
                     d3.selectAll('.dot').style('opacity',0.2)
-                    var country = d.Country;
-                    var select = $('.dot[data-country="' + country + '"]');
+                    var country;
+                    if (d.Country === 'United States' || 'United Kingdom' || 'United Arab Emirates' || 'Philippines' || 'Netherlands' || 'Maldives' || 'Dominican Republic' || 'Czech Republic') {
+                    	country = 'the ' + d.Country
+                    } else {
+                    	country = d.Country
+                    }
+
+                    var select = $('.dot[data-country="' + d.Country + '"]');
                     d3.selectAll(select).classed('active', true).style('opacity',0.8);
-                    $('p.country strong').html(d.Country)
+                    $('p.country strong').html('in ' + d.Country)
 
 	            })
 	            .on("mouseout", function(d){ 
                     d3.selectAll('.dot').style('opacity',0.6).classed('active', false);
-                    $('p.country strong').html('')
+                    $('p.country strong').html('across the world')
 	            });
 		});
 	
