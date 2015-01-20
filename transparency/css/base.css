@@ -1,0 +1,93 @@
+p.country {
+	text-align: center;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 1.3em;
+	position: absolute;
+	left: 10%;
+}
+
+div.chart {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 800px;
+}
+
+/*SCATTER STYLES*/
+.axis path,
+.axis line {
+	fill: none;
+	stroke: #ddd;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 13px;
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.y.axis line, .y.axis path {
+    stroke: #ddd;
+}
+
+.dot {
+    fill: #bfbfbf;
+}
+
+.dot.fb {
+	fill: rgb(51,153,255);
+}
+
+.dot.gg {
+	fill: rgb(255,153,102);
+}
+
+.dot.active {
+    stroke: #000;
+    stroke-width: 2;
+}
+
+/*TOOLTIP STYLES*/
+div.tooltip-wrap {
+	display: none;
+	z-index: 10;
+    position: absolute;
+    pointer-events: none;
+  	background-color: #fff;
+  	border: 2px solid #ccc;
+  	padding: 10px;
+}
+
+div.tooltip-wrap p {
+	margin: 0 0 5px 0;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 0.9em;
+}
+
+p.tt-date {
+	text-transform: uppercase;
+	color: #999;
+	font-size: 0.8em !important;
+}
+
+p.tt-country {
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+div.tooltip-wrap p.request {
+	margin: 0 0 15px 0;
+}
+
+div.tooltip-wrap p span {
+	padding: 3px;
+}
+
+span.fb {
+	background-color: rgba(51,153,255,0.3);
+}
+
+span.gg {
+	background-color: rgba(255,153,102,0.5);
+}

@@ -121,7 +121,9 @@ function drawChart() {
                     d3.select(this).classed('active', true);
                     this.parentNode.appendChild(this);
                     d3.selectAll('.dot').style('opacity',0.2)
+                    
                     var country;
+
                     if (d.Country === 'United States' || d.Country === 'United Kingdom' || d.Country === 'United Arab Emirates' || d.Country === 'Philippines' || d.Country === 'Netherlands' || d.Country === 'Maldives' || d.Country === 'Dominican Republic' || d.Country === 'Czech Republic') {
                     	country = 'the ' + d.Country
                     } else {
@@ -130,12 +132,21 @@ function drawChart() {
 
                     var select = $('.dot[data-country="' + d.Country + '"]');
                     d3.selectAll(select).classed('active', true).style('opacity',0.8);
-                    $('p.country strong').html('in ' + country)
 
+                    $('p.country strong').html('in ' + country);
+                    
+                    var tt = ich.tooltip(d);
+                    var offset = $(this).offset();
+                    var width = $(this).outerWidth();
+                    $('div.tooltip-wrap')
+                        .html(tt)
+                        .css({top:offset.top, left:offset.left + width + 10})
+                       .show();
 	            })
 	            .on("mouseout", function(d){ 
                     d3.selectAll('.dot').style('opacity',0.6).classed('active', false);
                     $('p.country strong').html('across the world')
+                    $('div.tooltip-wrap').hide();
 	            });
 		});
 

@@ -7,7 +7,7 @@
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="author" content="Denise Lu">
-    <link rel="stylesheet" type="text/css" href="base.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 
 <body>
@@ -17,10 +17,39 @@
 		<p class="country">User data requests <strong>across the world</strong></p>
 	</div>
 </div>
+<div class="tooltip-wrap"></div>
 
+	<script type="text/html" id="tooltip">
+		<p class="tt-date">{{Period Ending}}</p>
+		<p class="tt-country"><strong>{{Country}}</strong></p>
+		{{#GG User Data Requests}}
+			<p class="request"><strong>{{GG User Data Requests}}</strong> <span class="gg">Google</span> requests</p>
+		{{/GG User Data Requests}}
+		{{#FB Requests for User Data}}
+			<p class="request"><strong>{{FB Requests for User Data}}</strong> <span class="fb">Facebook</span> requests</p>
+		{{/FB Requests for User Data}}
+		
+		{{#GG Percentage of requests where some data produced}}
+			<p class="pct">{{GG Percentage of requests where some data produced}}% of requests where some data was produced</p>
+		{{/GG Percentage of requests where some data produced}}
+		{{#FB Percentage of requests where some data produced}}
+			<p class="pct">{{FB Percentage of requests where some data produced}} of requests where some data was produced</p>
+		{{/FB Percentage of requests where some data produced}}
+		{{#GG Users/Accounts Specified}}
+			<p class="accts">{{GG Users/Accounts Specified}} accounts specified</p>
+		{{/GG Users/Accounts Specified}}
+		{{#FB User Accounts Referenced}}
+			<p class="accts">{{FB User Accounts Referenced}} accounts specified</p>
+		{{/FB User Accounts Referenced}}
+	</script>
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script src="js/ich.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-	<script type="text/javascript" src="base.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+
+
+
+
 </body>
 </html>
