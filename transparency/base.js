@@ -116,7 +116,18 @@ function drawChart() {
                 		return null
                 	}
                 })
-                .style("opacity", 0.7)
+                .style("opacity", 0.6)
+                .on("mouseover", function(d){
+                    d3.select(this).classed('active', true);
+                    this.parentNode.appendChild(this);
+                    d3.selectAll('.dot').style('opacity',0.2)
+                    var country = d.Country;
+                    var select = $('.dot[data-country="' + country + '"]');
+                    d3.selectAll(select).classed('active', true).style('opacity',0.8);
+	            })
+	            .on("mouseout", function(d){ 
+                    d3.selectAll('.dot').style('opacity',0.6).classed('active', false);
+	            });
 		});
 	
 }

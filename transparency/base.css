@@ -28,3 +28,8 @@
 .dot.gg {
 	fill: #FF9966;
 }
+
+.dot.active {
+    stroke: #000;
+    stroke-width: 2;
+}
