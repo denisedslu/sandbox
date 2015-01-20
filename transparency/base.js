@@ -122,7 +122,7 @@ function drawChart() {
                     this.parentNode.appendChild(this);
                     d3.selectAll('.dot').style('opacity',0.2)
                     var country;
-                    if (d.Country === 'United States' || 'United Kingdom' || 'United Arab Emirates' || 'Philippines' || 'Netherlands' || 'Maldives' || 'Dominican Republic' || 'Czech Republic') {
+                    if (d.Country === 'United States' || d.Country === 'United Kingdom' || d.Country === 'United Arab Emirates' || d.Country === 'Philippines' || d.Country === 'Netherlands' || d.Country === 'Maldives' || d.Country === 'Dominican Republic' || d.Country === 'Czech Republic') {
                     	country = 'the ' + d.Country
                     } else {
                     	country = d.Country
@@ -130,7 +130,7 @@ function drawChart() {
 
                     var select = $('.dot[data-country="' + d.Country + '"]');
                     d3.selectAll(select).classed('active', true).style('opacity',0.8);
-                    $('p.country strong').html('in ' + d.Country)
+                    $('p.country strong').html('in ' + country)
 
 	            })
 	            .on("mouseout", function(d){ 
