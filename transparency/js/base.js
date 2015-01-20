@@ -125,7 +125,12 @@ function drawChart() {
                 d.requests_formatted = $(this).data("requests").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                 d.site = $(this).data("site");   
                 if ($(this).data("accts") !== undefined) {
-                    d.accts_formatted = $(this).data("accts").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")    
+                    d.accts_formatted = $(this).data("accts").toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    if (d.accts_formatted === '1') {
+                        d.accts_unit = 'account'
+                    } else {
+                        d.accts_unit = 'accounts'
+                    }
                 };
 
                 // GRABBING ICANHAZ TEMPLATE
