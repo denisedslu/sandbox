@@ -91,27 +91,18 @@ function drawChart() {
                 .attr("data-country", function(d) {
                 	return d.Country
                 })
-                .attr("data-process", function(d) {
-                	if (d['GG Legal Process'] !== '') {
-                		return d['GG Legal Process']
-                	} else {
-                		return null
-                	}
+                .attr("data-requests", function(d) {
+                    if (d['GG User Data Requests'] !== '') {
+                        return d['GG User Data Requests']
+                    } else if (d['FB Requests for User Data'] !== '') {
+                        return d['FB Requests for User Data']
+                    }
                 })
                 .attr("data-accts", function(d) {
                 	if (d['GG Users/Accounts Specified'] !== '') {
                 		return d['GG Users/Accounts Specified']
                 	} else if (d['FB User Accounts Referenced']!== '') {
                 		return d['FB User Accounts Referenced']
-                	} else {
-                		return null
-                	}
-                })
-                .attr("data-pct", function(d) {
-                	if (d['GG Percentage of requests where some data produced'] !== '') {
-                		return d['GG Percentage of requests where some data produced']
-                	} else if (d['FB Percentage of requests where some data produced'] !== '') {
-                		return d['FB Percentage of requests where some data produced']
                 	} else {
                 		return null
                 	}
@@ -134,7 +125,15 @@ function drawChart() {
                     d3.selectAll(select).classed('active', true).style('opacity',0.8);
 
                     $('p.country strong').html('in ' + country);
+
+                    d.requests_formatted = $(this).data('requests').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")    
+
+                    if ($(this).data('accts') !== undefined) {
+                        d.accts_formatted = $(this).data('accts').toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")    
+                    }
                     
+                    
+
                     var tt = ich.tooltip(d);
                     var offset = $(this).offset();
                     var width = $(this).outerWidth();

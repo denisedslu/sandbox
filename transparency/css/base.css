@@ -76,8 +76,8 @@ p.tt-country {
 	text-transform: uppercase;
 }
 
-div.tooltip-wrap p.request {
-	margin: 0 0 15px 0;
+div.tooltip-wrap p.pct {
+	margin: 15px 0 5px 0;
 }
 
 div.tooltip-wrap p span {
