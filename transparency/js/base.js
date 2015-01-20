@@ -37,7 +37,7 @@ function drawChart() {
 			.append("g")
 				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var xAxisG, yAxisG, dot, xLabel;
+        var xAxisG, yAxisG, dot;
 		 
 		// Get the data
 		d3.csv("data/gg-data.csv", function(error, data) {
@@ -47,21 +47,9 @@ function drawChart() {
 				.attr("transform", "translate(0," + height + ")")
 				.call(xAxis);
 
-            xLabel = xAxisG.append('text')
-                .attr("transform", "translate(" + (width / 2) + " ," + margin.bottom + ")")
-                .style("text-anchor", "middle")
-                .text('Date');
-
 			yAxisG = svg.append('g')
                 .attr('class', 'y axis')
-                .call(yAxis)
-                .append('text')
-                    .attr('transform', 'rotate(-90)')
-                    .attr('y', -50)
-                    .attr('x', -height / 2)
-                    .attr('dy', '.71em')
-                    .style('text-anchor', 'middle')
-                    .text('Requests for user data');
+                .call(yAxis);
 		 
             dot = svg.selectAll(".dot")
                 .data(data)
@@ -181,7 +169,17 @@ function drawChart() {
 
         var lazyResize = _.debounce(chartResize, 100);
         d3.select(window).on('resize', lazyResize);
+
+        eventListeners();
 	
+}
+
+function eventListeners() {
+    $('span.us').on('mouseover', function(){
+        d3.selectAll($('.dot[data-country="United States"]')).classed('active', true).style('opacity',0.8);
+    }).on('mouseout', function(){
+        d3.selectAll('.dot').style('opacity',0.6).classed('active', false);
+    })
 }
 
 
