@@ -1,0 +1,18 @@
+{% for row in data %}
+
+		<button class="channel" data-idx="{{-- loop.index0 --}}" data-vid="{{-- row.vid --}}" data-start="{{-- row.start --}}" data-end="{{-- row.end --}}">
+			<div class="progressbar">
+				<div class="pbar"></div>
+			</div>
+			
+			<p class="ctitle">{{-- row.title --}} <a href="https://www.youtube.com/watch?v={{-- row.vid --}}">>></a></p>
+			<p class="cartist">{{-- row.artist --}}</p>
+			<p class="calbum">
+				<a class="albumtext" href="{{-- row.link --}}">{{-- row.album --}} ({{-- row.year --}})</a>
+				
+				<a class="albumdollar" href="{{-- row.link --}}">{{-- row.dollarfill --}}</a>
+			</p>
+		</button>
+
+
+{% endfor %}
