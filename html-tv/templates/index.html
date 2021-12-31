@@ -100,8 +100,8 @@
     let player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        height: '205',
-        width: '361',
+        height: window.innerWidth > 480 ? '205' : '125',
+        width: window.innerWidth > 480 ? '361' : '218',
         videoId: 'RCx901bOa4U',
         playerVars: {
           'autoplay': 0,
@@ -443,14 +443,14 @@
     position: relative;
   }
 
-  @keyframes tvstatic {
+  /*@keyframes tvstatic {
     from {
       background-size: 100% 100%;
     }
     to {
       background-size: 200% 200%;
     }
-  }
+  }*/
 
   .tv #tvstatic {
     position: absolute;
@@ -468,7 +468,6 @@
   .tv #tvstatic.hidden {
     visibility: hidden;
   }
-
 
   .tv .controls {
     width: 45px;
@@ -527,6 +526,25 @@
     background-color: white;
     margin-bottom: 10px;
     outline: 2px solid #5a88ef;
+  }
+
+  @media (max-width: 480px) {
+    .tv {
+      width: 230px;
+    }
+
+    .tv .screen {
+      width: 120px;
+      height: 120px;
+    }
+
+    .tv .controls {
+      height: 120px;
+    }
+
+    #player {
+      transform: translate(-95.5px,-2.5px);
+    }
   }
 
 
