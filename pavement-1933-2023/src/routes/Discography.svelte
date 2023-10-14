@@ -196,7 +196,7 @@
 		transform:translate(0,-80%);
 		background-position:30% 0;
 	}
-	:global([data-mode="prod"] .discography-big-wrap .tracklist .track.separator p:before) { background-image:url('/pavement-1933-2023/images/border-h.png');}
+	:global([data-mode="prod"] .discography-big-wrap .tracklist .track.separator p:before) { background-image:url('/sandbox/pavement-1933-2023/images/border-h.png');}
 
 	.tracklist .track p {
 		margin:0;
@@ -234,12 +234,12 @@
 	[data-index="4"] .track.d2020s p {background-image:url('images/highlight-d2020s.png');animation: anim 0.3s linear 1 forwards;}
 	[data-index="4"] .track.d2020s.d2010s p {background-image:none;}
 
-	:global([data-mode="prod"] .discography-big-wrap [data-index="1"] .track.d2020s p) {background-image:url('/pavement-1933-2023/images/highlight-d2020s.png');}
-	:global([data-mode="prod"] .discography-big-wrap [data-index="2"] .track.d2020s p) {background-image:url('/pavement-1933-2023/images/highlight-d2020s.png');}
-	:global([data-mode="prod"] .discography-big-wrap [data-index="2"] .track.d2020s.d2010s p) {background-image:url('/pavement-1933-2023/images/highlight-d2020s-d2010s.png');}
-	:global([data-mode="prod"] .discography-big-wrap [data-index="2"] .track.d2010s p) {background-image:url('/pavement-1933-2023/images/highlight-d2010s.png');}
-	:global([data-mode="prod"] .discography-big-wrap [data-index="3"] .track.d2010s p) {background-image:url('/pavement-1933-2023/images/highlight-d2010s.png');}
-	:global([data-mode="prod"] .discography-big-wrap [data-index="4"] .track.d2020s p) {background-image:url('/pavement-1933-2023/images/highlight-d2020s.png');}
+	:global([data-mode="prod"] .discography-big-wrap [data-index="1"] .track.d2020s p) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2020s.png');}
+	:global([data-mode="prod"] .discography-big-wrap [data-index="2"] .track.d2020s p) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2020s.png');}
+	:global([data-mode="prod"] .discography-big-wrap [data-index="2"] .track.d2020s.d2010s p) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2020s-d2010s.png');}
+	:global([data-mode="prod"] .discography-big-wrap [data-index="2"] .track.d2010s p) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2010s.png');}
+	:global([data-mode="prod"] .discography-big-wrap [data-index="3"] .track.d2010s p) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2010s.png');}
+	:global([data-mode="prod"] .discography-big-wrap [data-index="4"] .track.d2020s p) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2020s.png');}
 	
 
 	@media (max-width:930px) {

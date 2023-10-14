@@ -357,7 +357,7 @@
 		    background-repeat:no-repeat;
 			background-size:contain;
 		}
-		:global([data-mode="prod"] .setlists-big-wrap .select-wrap select) {background-image:url('/pavement-1933-2023/images/highlight-d2020s.png')}
+		:global([data-mode="prod"] .setlists-big-wrap .select-wrap select) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2020s.png')}
 	}
 
 	.wrap {
@@ -419,7 +419,7 @@
 /*		background-color:var(--d2020s);*/
 		background-image:url('images/highlight-d2020s.png');
 	}
-	:global([data-mode="prod"] .setlists-big-wrap .dates-wrap p.sdate) {background-image:url('/pavement-1933-2023/images/highlight-d2020s.png')}
+	:global([data-mode="prod"] .setlists-big-wrap .dates-wrap p.sdate) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2020s.png')}
 
 
 	.dates-wrap p.sdate.highlight {
@@ -433,7 +433,7 @@
 	.dates-wrap p.cdate.highlight {
 		background-image:url('images/highlight-d2020s.png');
 	}
-	:global([data-mode="prod"] .setlists-big-wrap .dates-wrap p.cdate.highlight) {background-image:url('/pavement-1933-2023/images/highlight-d2020s.png')}
+	:global([data-mode="prod"] .setlists-big-wrap .dates-wrap p.cdate.highlight) {background-image:url('/sandbox/pavement-1933-2023/images/highlight-d2020s.png')}
 
 
 	.dates-wrap .runline {
@@ -458,7 +458,7 @@
 		transform:translate(0,-80%);
 		background-position:13% 0;
 	}
-	:global([data-mode="prod"] .setlists-big-wrap .dates-wrap .runline:before) {background-image:url('/pavement-1933-2023/images/border-h.png')}
+	:global([data-mode="prod"] .setlists-big-wrap .dates-wrap .runline:before) {background-image:url('/sandbox/pavement-1933-2023/images/border-h.png')}
 
 
 	.chart-wrap {
@@ -554,13 +554,13 @@
 		background-position:center;
 		background-size:100%;
 	}
-	:global([data-mode="prod"] .g-song.highlight .c:after) {background-image:url('/pavement-1933-2023/images/star-yellow.png')}
+	:global([data-mode="prod"] .g-song.highlight .c:after) {background-image:url('/sandbox/pavement-1933-2023/images/star-yellow.png')}
 
 
 	:global(.g-song.highlight .c.s2:after, .g-song.highlight .c.s3:after) {
 		background-image:url('images/star-blue.png');
 	}
-	:global([data-mode="prod"] .g-song.highlight .c.s2:after, [data-mode="prod"] .g-song.highlight .c.s3:after) {background-image:url('/pavement-1933-2023/images/star-blue.png')}
+	:global([data-mode="prod"] .g-song.highlight .c.s2:after, [data-mode="prod"] .g-song.highlight .c.s3:after) {background-image:url('/sandbox/pavement-1933-2023/images/star-blue.png')}
 
 	:global(.g-song.highlight .c.hover) {
 		border:2px solid black;
@@ -682,7 +682,7 @@
 			transform:translate(-80%,0);
 			background-position:0 51%;
 		}
-		:global([data-mode="prod"] .setlists-big-wrap .dates-wrap .runline:before) {background-image:url('/pavement-1933-2023/images/border-v.png')}
+		:global([data-mode="prod"] .setlists-big-wrap .dates-wrap .runline:before) {background-image:url('/sandbox/pavement-1933-2023/images/border-v.png')}
 
 
 		.dates-wrap, .chart-wrap {
