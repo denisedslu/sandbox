@@ -1,1 +1,0 @@
-var s;const a=((s=globalThis.__sveltekit_1rl4vec)==null?void 0:s.base)??"/sandbox/pavement-1933-2023";var e;const t=((e=globalThis.__sveltekit_1rl4vec)==null?void 0:e.assets)??a;export{t as a,a as b};

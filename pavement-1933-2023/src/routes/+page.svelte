@@ -15,15 +15,15 @@
 	<meta property="og:title" content="PAVEMENT 1933-2023">
 	<meta name="description" content="A visual look at setlist data from Pavement's 2022-2023 reunion and touring history.">
 	<meta property="og:description" content="A visual look at setlist data from Pavement's 2022-2023 reunion and touring history.">
-	<meta property="og:image" content="">
-	<meta property="og:url" content="">
+	<meta property="og:image" content="https://www.deniselu.com/sandbox/pavement-1933-2023/images/pavement-1933-2023-setlists-promo-twitter.png">
+	<meta property="og:url" content="https://www.deniselu.com/sandbox/pavement-1933-2023/">
 	<meta property="og:type" content="article">
-	<meta property="twitter:url" content="">
+	<meta property="twitter:url" content="https://www.deniselu.com/sandbox/pavement-1933-2023/">
 	<meta property="twitter:title" content="PAVEMENT 1933-2023">
 	<meta property="twitter:description" content="A visual look at setlist data from Pavement's 2022-2023 reunion and touring history.">
-	<meta property="twitter:image" content="">
-	<meta name="image" content="">
-	<meta property="article:published_time" content="2023-10-09T00:00:00.000Z">
+	<meta property="twitter:image" content="https://www.deniselu.com/sandbox/pavement-1933-2023/images/pavement-1933-2023-setlists-promo-twitter.png">
+	<meta name="image" content="https://www.deniselu.com/sandbox/pavement-1933-2023/images/pavement-1933-2023-setlists-promo-twitter.png">
+	<meta property="article:published_time" content="2023-10-16T14:00:00.000Z">
 	<meta name="news_keywords" content="Pavement,Stephen Malkmus,Pavement reunion,Pavement setlist,Pavement concert,Pavement shows,setlist,setlist fm,Slanted and Enchanted,Crooked Rain,Wowee Zowee,Brighten the Corners,Terror Twilight,Westing By Musket and Sextant,Spiral Stairs,Harness Your Hopes,Range Life,Cut Your Hair,Summer Babe,Brooklyn Steel,Pavement b-sides,datavis,interactive,graphics,charts">
 	<meta name="robots" content="noarchive, max-image-preview:large">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
