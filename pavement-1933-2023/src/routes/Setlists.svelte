@@ -201,6 +201,7 @@
 				{/each}
 			</select>
 		</div>
+		<p class="prompt"><span>☟</span> {desktop ? "Hover" : "Tap"} on the grid to see the songs on each night</p>
 
 
 		<div class="big-wrap">
@@ -391,6 +392,17 @@
 	    max-width:var(--body-width);
 	    padding:3px 5px;
 	    position:relative;
+	}
+
+	p.prompt {
+		font-family: var(--font-sans);
+		margin: 0;
+		font-size:16px;
+		text-align:center;
+	}
+
+	p.prompt span {
+		font-size:20px;
 	}
 
 	.dates-wrap {
@@ -641,6 +653,14 @@
 	}
 
 	@media (max-width:720px) {
+		p.prompt {
+			font-size:14px;
+		}
+
+		p.prompt span {
+			font-size:18px;
+		}
+
 		.dates-wrap {
 			height: 100%;
 			width:80px;
