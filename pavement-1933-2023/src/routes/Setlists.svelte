@@ -31,11 +31,11 @@
 			'hed':'Openers',
 			'sets': [
 				{
-					'blurb': "<span>“Our Singer”</span> opened 10 shows.",
+					'blurb': "<span>“Our Singer”</span> opened 11 shows.",
 					'img':"oursinger",
 				},
 				{
-					'blurb': "<span>“Grounded”</span> opened 24 shows and was also played throughout the set.",
+					'blurb': "<span>“Grounded”</span> opened 26 shows and was also played throughout the set.",
 					'img':"grounded",
 				},
 			]

@@ -100,6 +100,8 @@
 	<p>Sources: Setlist.fm, Discogs.com, Bandcamp.com. Setlist data as of Sept. 17, 2023. Setlist items that are medleys are not included. B‑sides of the same name are grouped with the first compilation they are released on.
 	</p>
 
+	<p>Corrections: A previous version of this page incorrectly stated the number of times “Our Singer” and “Grounded” opened shows. “Our Singer” opened 11, not 10, times. “Grounded” opened 26, not 24, times.</p>
+
 	<p>By <a href="https://www.deniselu.com/">Denise Lu</a>. Get in touch if you have an original pressing of <em>Slay Tracks</em> you want to sell me.</p>
 </section>
 
